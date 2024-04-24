@@ -1,0 +1,22 @@
+{
+  "name": "postgres-backup-s3",
+  "version": "1.0.0",
+  "description": "Automates PostgreSQL database backups, encrypts and uploads them to S3 storage.",
+  "license": "MIT",
+  "author": "Alexandre Paiva <alexandrepaiva.dev@gmail.com>",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.556.0",
+    "@aws-sdk/lib-storage": "^3.556.0",
+    "cron": "^3.1.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.13",
+    "pg": "^8.11.5"
+  }
+}

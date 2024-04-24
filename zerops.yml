@@ -1,0 +1,15 @@
+zerops:
+  - setup: backup
+    build:
+      base: nodejs@20
+      buildCommands:
+        - yarn
+      deploy:
+        - ./
+      cache:
+        - node_modules
+        - yarn-lock.json
+    run:
+      prepareCommands:
+        - apt-get update && apt-get install -y openssl postgresql-client postgresql-client-common libpq-dev
+      start: yarn start
